@@ -1,61 +1,58 @@
-/*  TangerineUI 🍊 for Mastodon
-    version: 0.9.5
-
-    by @nileane@nileane.fr
-    Tangerine UI is a UI revamp for Mastodon's Web interface.
-   
+/*  CuscuzinUI 🍊 for Mastodon   
     Last Mastodon compatibility check: v4.1.4 stable ✅
 */
 
 
 /* 🎨 Colors */
+*/
 :root {
     --color-bg: #f5f2ef;
-    --color-fg: #2a2d37;
+    --color-fg: #444b5d;
     --color-fg-muted: #948c84;
     --color-secondary-bg: #f2eae4;
     --color-secondary-separator: #ede3db;
 
     --color-content-bg: #ffffff;
-    --color-content-fg: #444a5a;
+    --color-content-fg: hsl(224, 14%, 31%);
     --color-content-fg-bold: #000000;
-    --color-content-fg-muted: #8b92a7;
+    --color-content-fg-muted: hsl(224, 14%, 60%);
     --color-content-secondary-bg: #f9f6f4;
     --color-content-secondary-separator: rgba(237, 227, 219, 0.4);
     --color-content-bg-focus: #fffcfa;
 
-    --color-accent: #f76902;
-    --color-accent-focus: #ff9447;
+    --color-accent: #f76a02;
+    --color-accent-focus: #ff9346;
     --color-accent-bg: #f6e5dd;
     --color-accent-fg: #ffffff;
-
+    
     --color-lines: var(--color-bg);
 
-}
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-bg: #19191a;
-        --color-fg: #e0d6d1;
-        --color-fg-muted: #6e635e;
-        --color-secondary-bg: #211f1d;
-        --color-secondary-separator: #2e2823;
     
-        --color-content-bg: #262627;
+}
+@media /* (prefers-color-scheme: dark) */
+{
+    :root {
+        --color-bg: #1B1C1E;
+        --color-fg: #cfbeb7;
+        --color-fg-muted: #6e635e;
+        --color-secondary-bg: #121212;
+        --color-secondary-separator: #2e2823;
+
+        --color-content-bg: #2b2b2b;
         --color-content-fg: #f2f2f2;
-        --color-content-fg-bold: #ffffff;
-        --color-content-fg-muted: #737373;
+        --color-content-fg-bold: hsl(0, 0%, 95%);
+        --color-content-fg-muted: hsl(0, 0%, 45%);
         --color-content-secondary-bg: #332f2c;
         --color-content-secondary-separator: rgba(77, 73, 70, 0.4);
         --color-content-bg-focus: #2e2e2e;
-    
-        --color-accent: #e68933;
-        --color-accent-focus: #ffa047;
+
+        --color-accent: #b09c3d;
+        --color-accent-focus: #807025;
         --color-accent-bg: #3c2a1f;
         --color-accent-fg: #ffffff;
-
+        
         --color-lines: var(--color-content-secondary-bg);
     }
-}
 :root {
     --logo: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' class='mastodon-logo' viewBox='0 0 216.414 232.01'%3E%3Cdefs xmlns='http://www.w3.org/2000/svg'%3E%3ClinearGradient xmlns='http://www.w3.org/2000/svg' id='a' x2='0%25' y2='100%25' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0%25' stop-color='%23f76a02'/%3E%3Cstop offset='100%25' stop-color='%23f76a02'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath xmlns='http://www.w3.org/2000/svg' fill='url(%23a)' d='M211.807 139.088c-3.18 16.366-28.492 34.277-57.562 37.748-15.159 1.809-30.084 3.471-45.999 2.741-26.027-1.192-46.565-6.212-46.565-6.212 0 2.534.156 4.946.469 7.202 3.384 25.687 25.47 27.225 46.391 27.943 21.116.723 39.919-5.206 39.919-5.206l.867 19.09s-14.77 7.931-41.08 9.39c-14.51.797-32.525-.365-53.507-5.919C9.232 213.82 1.406 165.311.209 116.091c-.365-14.613-.14-28.393-.14-39.918 0-50.33 32.976-65.083 32.976-65.083C49.672 3.454 78.204.242 107.865 0h.729c29.66.242 58.21 3.454 74.837 11.09 0 0 32.975 14.752 32.975 65.082 0 0 .414 37.134-4.599 62.916'/%3E%3Cpath fill='%23fff' d='M177.51 80.077v60.941h-24.144v-59.15c0-12.469-5.246-18.797-15.74-18.797-11.602 0-17.417 7.507-17.417 22.352V117.8H96.207V85.423c0-14.845-5.816-22.352-17.418-22.352-10.494 0-15.74 6.328-15.74 18.797v59.15H38.905V80.077c0-12.455 3.171-22.352 9.541-29.675 6.569-7.322 15.171-11.076 25.85-11.076 12.355 0 21.711 4.748 27.898 14.247l6.013 10.082 6.015-10.082c6.185-9.498 15.542-14.247 27.898-14.247 10.677 0 19.28 3.753 25.85 11.076 6.369 7.322 9.54 17.22 9.54 29.675'/%3E%3C/svg%3E");
 
@@ -113,7 +110,7 @@
     --icon-star-active: '\f005';
     --icon-search: url("data:image/svg+xml;charset=utf-8, %3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23282C37' aria-hidden='true' viewBox='0 0 24 24'%3E%3Cpath d='M10.25 3.75a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zm-8.5 6.5a8.5 8.5 0 1 1 15.176 5.262l4.781 4.781-1.414 1.414-4.781-4.781A8.5 8.5 0 0 1 1.75 10.25z'/%3E%3C/svg%3E");
 }
-@media (prefers-color-scheme: dark) {
+@media /* (prefers-color-scheme: dark) */ {
     :root {
         --logo: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' class='mastodon-logo' viewBox='0 0 216.414 232.01'%3E%3Cdefs xmlns='http://www.w3.org/2000/svg'%3E%3ClinearGradient xmlns='http://www.w3.org/2000/svg' id='a' x2='0%25' y2='100%25' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0%25' stop-color='%23E68A32'/%3E%3Cstop offset='100%25' stop-color='%23E68A32'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath xmlns='http://www.w3.org/2000/svg' fill='url(%23a)' d='M211.807 139.088c-3.18 16.366-28.492 34.277-57.562 37.748-15.159 1.809-30.084 3.471-45.999 2.741-26.027-1.192-46.565-6.212-46.565-6.212 0 2.534.156 4.946.469 7.202 3.384 25.687 25.47 27.225 46.391 27.943 21.116.723 39.919-5.206 39.919-5.206l.867 19.09s-14.77 7.931-41.08 9.39c-14.51.797-32.525-.365-53.507-5.919C9.232 213.82 1.406 165.311.209 116.091c-.365-14.613-.14-28.393-.14-39.918 0-50.33 32.976-65.083 32.976-65.083C49.672 3.454 78.204.242 107.865 0h.729c29.66.242 58.21 3.454 74.837 11.09 0 0 32.975 14.752 32.975 65.082 0 0 .414 37.134-4.599 62.916'/%3E%3Cpath fill='%23fff' d='M177.51 80.077v60.941h-24.144v-59.15c0-12.469-5.246-18.797-15.74-18.797-11.602 0-17.417 7.507-17.417 22.352V117.8H96.207V85.423c0-14.845-5.816-22.352-17.418-22.352-10.494 0-15.74 6.328-15.74 18.797v59.15H38.905V80.077c0-12.455 3.171-22.352 9.541-29.675 6.569-7.322 15.171-11.076 25.85-11.076 12.355 0 21.711 4.748 27.898 14.247l6.013 10.082 6.015-10.082c6.185-9.498 15.542-14.247 27.898-14.247 10.677 0 19.28 3.753 25.85 11.076 6.369 7.322 9.54 17.22 9.54 29.675'/%3E%3C/svg%3E");
 
@@ -346,7 +343,7 @@ body.layout-single-column  {
     filter: brightness(0) saturate(100%) invert(51%) sepia(47%) saturate(996%) hue-rotate(339deg) brightness(95%) contrast(90%);
     transition: none;
 }
-@media (prefers-color-scheme: dark) {
+@media /* (prefers-color-scheme: dark) */ {
     .layout-single-column .detailed-status__action-bar button.icon-button:not(.active,:hover) {
         filter: brightness(0) saturate(100%) invert(67%) sepia(40%) saturate(2566%) hue-rotate(340deg) brightness(97%) contrast(86%);
     }
@@ -766,7 +763,7 @@ body.layout-single-column  {
     justify-content: left;
     margin-top: 8px;
 }
-@media (prefers-color-scheme: dark) {
+@media /* (prefers-color-scheme: dark) */ {
     .layout-single-column .status__action-bar {
         opacity: .7;
     }
@@ -1103,7 +1100,7 @@ body.layout-single-column  {
         margin-top: -10px;
     }
 }
-@media (prefers-color-scheme: dark) {
+@media /* (prefers-color-scheme: dark) */ {
     @media screen and (max-width:1174px) {
         .layout-single-column .ui:after {
             background-color: rgba(24, 24, 25, 0.7);
@@ -1180,7 +1177,7 @@ body.layout-single-column  {
 .layout-single-column .account__section-headline button:last-child::after {
     display: none;
 }
-@media (prefers-color-scheme: dark) {
+@media /* (prefers-color-scheme: dark) */ {
     .layout-single-column .account__section-headline a.active, 
     .layout-single-column .account__section-headline button.active, 
     .layout-single-column .notification__filter-bar a.active, 
@@ -1358,7 +1355,7 @@ body.layout-single-column  {
         margin-left: -55px;
     }
 }
-@media (prefers-color-scheme: dark) {
+@media /* (prefers-color-scheme: dark) */ {
     @media screen and (max-width:1174px) {
         .layout-single-column .columns-area__panels__pane--navigational .navigation-panel {
             background-color: rgba(24, 24, 25, 0.7);
