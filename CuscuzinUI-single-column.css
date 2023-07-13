@@ -1032,7 +1032,7 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
     .layout-single-column .ui:after { /* Set a backdrop blur background to both top bars */
         -webkit-backdrop-filter: blur(12px);
         backdrop-filter: blur(12px);
-        background-color: rgba(245, 242, 239, 0.75);
+        background-color: var(--color-accent-focus); /*Cor da barra de navegação de cima no modo mobile*/
         content: "";
         height: 55px;
         left: 0;
@@ -1236,7 +1236,7 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
         overflow-x: auto;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: #12121261; /*Cor da barra de navegação no modo mobile*/
         border-left: 0;
     }
     .layout-single-column .navigation-panel .column-link, 
@@ -1252,7 +1252,7 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
         display: inline-flex;
         align-items: center;
         box-sizing: border-box;
-        background-color: transparent;
+        background-color: rgba(0, 0, 0, 0);
     }
     .layout-single-column a.column-link--transparent.active, 
     .layout-single-column a.column-link--transparent.active:hover,
