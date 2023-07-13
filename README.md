@@ -6,5 +6,5 @@ Cuscuz.in UI é a tentativa de elaborar um tema customizado com apenas CSS estil
 
 Mude o tema para Mastodon Noturno e cole o código na extensão Stylus. 
 ## Capturas de telas
-![Captura de tela da aba global no modo mobile](https://github.com/thargonion/Cuscuz.in-UI-Mastodon/blob/main/screenshots/global.png)
-![Captura de tela de um perfil no modo desktop](https://github.com/thargonion/Cuscuz.in-UI-Mastodon/blob/main/screenshots/profile.png)
+![Captura de tela da aba global no modo mobile](https://github.com/thargonion/Cuscuz.in-UI-Mastodon/blob/main/screenshots/global-mobile.png)
+![Captura de tela de um perfil no modo desktop](https://github.com/thargonion/Cuscuz.in-UI-Mastodon/blob/main/screenshots/global-desktop.png)
