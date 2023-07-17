@@ -1,5 +1,6 @@
 ﻿/*  CuscuzinUI 🍊 for Mastodon   
     Last Mastodon compatibility check: v4.1.4 stable ✅
+    Baseado na versão 1.5 do TangerineUI
 */
 
 
@@ -271,6 +272,10 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
     opacity: .2;
     pointer-events: none;
 }
+.layout-single-column .boost-modal__action-bar .fa-retweet {
+    background-image: var(--icon-boost);
+    vertical-align: middle;
+}
 /* Replace reply icon */
 .layout-single-column i.fa-mail-reply::before,
 .layout-single-column i.fa-reply::before,
@@ -520,9 +525,9 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
 .layout-single-column .compose-form .compose-form__modifiers .compose-form__upload .icon-button {
     color: #ffffff;
 }
-.compose-form .compose-form__modifiers .compose-form__upload .icon-button:active,
-.compose-form .compose-form__modifiers .compose-form__upload .icon-button:focus,
-.compose-form .compose-form__modifiers .compose-form__upload .icon-button:hover {
+.layout-single-column .compose-form .compose-form__modifiers .compose-form__upload .icon-button:active,
+.layout-single-column .compose-form .compose-form__modifiers .compose-form__upload .icon-button:focus,
+.layout-single-column .compose-form .compose-form__modifiers .compose-form__upload .icon-button:hover {
     background-color: rgba(0, 0, 0, .4);
 }
 @media screen and (max-width:1174px) {
@@ -779,7 +784,10 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
     background-color: var(--color-accent-bg);
 }
 .layout-single-column .status-card__image {
-    background: var(--color-content-secondary-bg);
+   background: var(--color-accent-bg);
+}
+.layout-single-column .status-card__image > .fa {
+    color: var(--color-accent);
 }
 .layout-single-column .status__content p {
     margin-bottom: 12px;
@@ -857,6 +865,20 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
     color: var(--color-accent-fg);
 }
 
+/* Poll composer */
+.layout-single-column .compose-form__poll-wrapper,
+.layout-single-column .compose-form__poll-wrapper .poll__footer {
+    border-top: 0;
+}
+.layout-single-column .compose-form__poll-wrapper ul {
+    background-color: var(--color-accent-bg);
+}
+.layout-single-column .compose-form__poll-wrapper .autosuggest-input input:focus {
+    box-shadow: 0 0 0 2px var(--color-accent);
+}
+.layout-single-column .compose-form__poll-wrapper .poll__footer .button.button-secondary {
+    padding: 6px 16px;
+}
 
 
 /* Empty columns */
@@ -1966,7 +1988,9 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
 }
 
 .layout-single-column .privacy-dropdown.active .privacy-dropdown__value.active,
+.layout-single-column .privacy-dropdown.active .privacy-dropdown__value,
 .layout-single-column .privacy-dropdown__option.active,
+.layout-single-column .privacy-dropdown__option.active:hover,
 .layout-single-column .privacy-dropdown__option:hover {
     background-color: var(--color-accent);
     color: var(--color-accent-fg);
@@ -1980,6 +2004,7 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
 .layout-single-column .privacy-dropdown__option:hover .privacy-dropdown__option__content strong,
 .layout-single-column .privacy-dropdown.active .privacy-dropdown__value.active .icon-button,
 .layout-single-column .privacy-dropdown .icon-button.inverted.active {
+    background-color: var(--color-accent);
     color: var(--color-accent-fg);
 }
 
@@ -2013,6 +2038,7 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
    --------------------- */
 .layout-single-column .interaction-modal {
     background-color: var(--color-content-bg);
+    border: 0;
 }
 .layout-single-column .interaction-modal,
 .layout-single-column .interaction-modal__lead h3 {
@@ -2037,7 +2063,77 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
 .layout-single-column .interaction-modal .copypaste button {
     padding: 7px 18px;
 }
+.layout-single-column .modal-root__overlay {
+    background-color: hsla(0, 0%, 1%, 0.7);
+}
+.layout-single-column .modal-root__modal,
+.layout-single-column .boost-modal__container,
+.layout-single-column .mute-modal__container,
+.layout-single-column .block-modal__container {
+    background-color: var(--color-content-bg);
+    color: var(--color-content-fg);
+}
+.layout-single-column .boost-modal__container {
+    margin-bottom: -11px;
+}
+.layout-single-column .confirmation-modal__container,
+.layout-single-column .mute-modal__container,
+.layout-single-column .block-modal__container {
+    background-color: var(--color-content-bg);
+    color: var(--color-content-fg);
+}
+.layout-single-column .block-modal__action-bar,
+.layout-single-column .boost-modal__action-bar,
+.layout-single-column .confirmation-modal__action-bar,
+.layout-single-column .mute-modal__action-bar {
+    background-color: var(--color-accent-bg);
+}
+.layout-single-column .block-modal__action-bar > div,
+.layout-single-column .boost-modal__action-bar > div,
+.layout-single-column .confirmation-modal__action-bar > div,
+.layout-single-column .mute-modal__action-bar > div,
+.layout-single-column .boost-modal__container .status__content__text,
+.layout-single-column .boost-modal__container .display-name strong.display-name__html,
+.layout-single-column .boost-modal__container .status__info,
+.layout-single-column .boost-modal__container .status__relative-time time,
+.layout-single-column .boost-modal__container .status.light .status__visibility-icon {
+    color: var(--color-content-fg);
+}
+.layout-single-column .actions-modal ul li:not(:empty) a {
+    color: var(--color-content-fg);
+}
+.layout-single-column .actions-modal ul li:not(:empty) a.active,
+.layout-single-column .actions-modal ul li:not(:empty) a.active button,
+.layout-single-column .actions-modal ul li:not(:empty) a:active,
+.layout-single-column .actions-modal ul li:not(:empty) a:active button,
+.layout-single-column .actions-modal ul li:not(:empty) a:focus,
+.layout-single-column .actions-modal ul li:not(:empty) a:focus button,
+.layout-single-column .actions-modal ul li:not(:empty) a:hover,
+.layout-single-column .actions-modal ul li:not(:empty) a:hover button {
+    background-color: var(--color-accent);
+    color: var(--color-accent-fg);
+}
 
+/* 🖼️ Picture in Picture */
+.layout-single-column .picture-in-picture {
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    border-radius: 7px;
+}
+.layout-single-column .picture-in-picture__footer,
+.layout-single-column .picture-in-picture__header {
+    background-color: var(--color-content-bg);
+}
+.layout-single-column .picture-in-picture__header .display-name span {  
+    color: var(--color-content-fg-muted);
+}
+
+/* ⏯️ Video controls */
+.layout-single-column .video-player__seek__progress,
+.layout-single-column .video-player__volume__handle,
+.layout-single-column .video-player__volume__current,
+.layout-single-column .video-player__seek__handle {
+    background-color: var(--color-accent);
+}
 
 
 /* 📄 Meta
