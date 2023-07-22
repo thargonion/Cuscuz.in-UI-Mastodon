@@ -1,6 +1,6 @@
 ﻿/*  CuscuzinUI - Dark for Mastodon   
     Last Mastodon compatibility check: v4.1.4 stable ✅
-    Baseado na versão 1.7.3 do TangerineUI
+    Baseado na versão 1.7.4 do TangerineUI
 */
 
 
@@ -2193,6 +2193,22 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
     background-color: var(--color-accent);
     color: var(--color-accent-fg);
 }
+/* Media modals */
+
+.layout-single-column .media-modal__overlay .picture-in-picture__footer {
+    background-color: transparent;
+}
+.layout-single-column .media-modal__nav,
+.layout-single-column .media-modal__overlay .picture-in-picture__footer .icon-button {
+    color: var(--color-content-fg);
+}
+.layout-single-column .media-modal__page-dot {
+    background-color: var(--color-content-fg);
+}
+.layout-single-column .modal-root__modal.media-modal {
+        background-color: rgba(0, 0, 0, .6);
+}
+
 
 /* 🖼️ Picture in Picture */
 .layout-single-column .picture-in-picture {

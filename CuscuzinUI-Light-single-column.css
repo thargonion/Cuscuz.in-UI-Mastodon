@@ -1,6 +1,6 @@
 ﻿/*  CuscuzinUI - Light for Mastodon   
     Last Mastodon compatibility check: v4.1.4 stable ✅
-    Baseado na versão 1.7.3 do TangerineUI
+    Baseado na versão 1.7.4 do TangerineUI
 */
 
 
@@ -17,7 +17,7 @@
     --color-content-fg: #444a5a;
     --color-content-fg-bold: #000000;
     --color-content-fg-muted: #8b92a7;
-    --color-content-secondary-bg: #f9f6f4;
+    --color-content-secondary-bg: #f9f9f4;
     --color-content-secondary-separator: rgba(237, 227, 219, 0.4);
     --color-content-bg-focus: #fffcfa;
 
@@ -2190,6 +2190,20 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
 .layout-single-column .actions-modal ul li:not(:empty) a:hover button {
     background-color: var(--color-accent);
     color: var(--color-accent-fg);
+}
+/* Media modals */
+.layout-single-column .modal-root__modal.media-modal {
+    background-color: rgba(255, 255, 255, .8);
+}
+.layout-single-column .media-modal__overlay .picture-in-picture__footer {
+    background-color: transparent;
+}
+.layout-single-column .media-modal__nav,
+.layout-single-column .media-modal__overlay .picture-in-picture__footer .icon-button {
+    color: var(--color-content-fg);
+}
+.layout-single-column .media-modal__page-dot {
+    background-color: var(--color-content-fg);
 }
 
 /* 🖼️ Picture in Picture */
