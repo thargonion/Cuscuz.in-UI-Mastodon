@@ -7,24 +7,24 @@
 /* 🎨 Colors */
 
 :root {
-        --color-bg: #1B1C1E;
+        --color-bg: #121212;
         --color-fg: #cfbeb7;
         --color-fg-muted: #6e635e;
         --color-secondary-bg: #121212;
         --color-secondary-separator: #2e2823;
 
         --color-content-bg: #2b2b2b;
-        --color-content-fg: #f2f2f2;
-        --color-content-fg-bold: hsl(0, 0%, 95%);
-        --color-content-fg-muted: hsl(0, 0%, 45%);
+        --color-content-fg: #D9D2C3F2;
+        --color-content-fg-bold: #DEDEDE;
+        --color-content-fg-muted: #737373;
         --color-content-secondary-bg: #332f2c;
-        --color-content-secondary-separator: rgba(77, 73, 70, 0.4);
+        --color-content-secondary-separator: #4D494666;
         --color-content-bg-focus: #2e2e2e;
 
-        --color-accent: #b09c3d;
-        --color-accent-focus: #807025;
-        --color-accent-bg: #3c2a1f;
-        --color-accent-fg: #ffffff;
+        --color-accent: #A49546;
+        --color-accent-focus: #726631;
+        --color-accent-bg: #372C25;
+        --color-accent-fg: #FFFFFFE6;
         
         --color-lines: var(--color-content-secondary-bg);
         --color-dm:#1d2c7978; 
