@@ -1,4 +1,4 @@
-﻿/*  CuscuzinUI - Light for Mastodon   
+/*  CuscuzinUI - Light for Mastodon   
     Last Mastodon compatibility check: v4.1.4 stable ✅
     Baseado na versão 1.7.4 do TangerineUI
 */
@@ -23,7 +23,7 @@
 
     --color-accent: #ccb64f;
     --color-accent-focus: #dbbe3a;
-    --color-accent-bg: #e1dbd5;
+    --color-accent-bg: hsl(44, 0%, 90%);
     --color-accent-fg: #ffffff;
 
     --color-lines: var(--color-bg);
@@ -1311,9 +1311,9 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
         padding-bottom: env(safe-area-inset-bottom);
         flex-direction: row;
         overflow-x: auto;
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        background-color: #12121261; /*Cor da barra de navegação inferior no modo mobile*/
+        /* backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);*/ /* blur*/
+        background-color: hsl(0, 0%, 90%); /*Cor da barra de navegação inferior no modo mobile*/
         border-left: 0;
     }
     .layout-single-column .navigation-panel .column-link, 
