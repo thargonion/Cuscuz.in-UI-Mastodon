@@ -8,7 +8,7 @@ Caso queira a versão no modo diurno, altere o tema padrão para Mastodon Diurno
 
 No smartphone, você pode utilizar o navegador Firefox com a extensão [Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/) ativada no modo "estático" e colando o CSS no seu editor. Mais instruções acerca disso, clique [aqui](https://darkreader.org/blog/stylish/) (em inglês). 
 
-Informações de como adicioná-lo na sua instância podem ser encontradas no seu repositório original [aqui](https://github.com/nileane/TangerineUI-for-Mastodon), porém aviso que, embora os temas em suas versões mais atuais já se encontram "usáveis", eles podem apresentar bugs e outros problemas. Assim, sugiro a utilização através do Stylus. 
+Informações de como adicioná-lo na sua instância podem ser encontradas no seu repositório original [aqui](https://github.com/nileane/TangerineUI-for-Mastodon), porém aviso que, embora os temas em suas versões mais atuais já se encontram "usáveis", eles podem apresentar bugs e outros problemas. Assim, sugiro a utilização através do Stylus. Além disso, a versão de múltiplas colunas ainda não é suportada pelo tema. 
 
 ## Algumas funcionalidades:
 
