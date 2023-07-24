@@ -1116,10 +1116,10 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
     .layout-single-column .column-back-button,
     .layout-single-column .column-header__button, 
     .layout-single-column .column-header__back-button {
-        background-color: transparent;
+        background-color: hsla(0, 0%, 0%, 0); /*Transparência da barra de navegação top Voltar modo mobile*/
         height: 55px;
     }
-    .layout-single-column .ui:after { /* Set a backdrop blur background to both top bars */
+   .layout-single-column .ui:after { /* Set a backdrop blur background to both top bars */
         -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
         background-color: var(--color-accent-focus); /*Cor da barra de navegação de cima no modo mobile*/
@@ -1130,7 +1130,8 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
         top: 0;
         width: 100%;
         z-index: 1;
-    }
+    } 
+
     .layout-single-column .ui:has(.columns-area__panels > .columns-area__panels__main > .tabs-bar__wrapper > #tabs-bar__portal > .column-back-button):after,
     .layout-single-column .ui:has(.columns-area__panels > .columns-area__panels__main > .tabs-bar__wrapper > #tabs-bar__portal > .column-header__wrapper):after { /* Backdrop blur has double the height only in cases where there's 2 top bars present */
         height: 110px;
@@ -1145,7 +1146,7 @@ layout-single-column .detailed-status__button i.fa-share-alt:before {
 }
 @media screen and (max-width:1174px) {
         .layout-single-column .ui::after {
-            background-color: var(--color-accent-focus); /*Cor da barra de navegação de cima no modo mobile*/
+            background-color: var(--color-content-secondary-bg); /*Cor da barra de navegação de cima no modo mobile (Voltar)*/
         }
     }
 
