@@ -15,7 +15,7 @@ Caso queira a versão no modo diurno, altere o tema padrão para Mastodon Diurno
 - Barra de navegação de abas do Mastodon movida para o inferior na visualização mobile.  
 ## Capturas de telas - Light Mode
 ![Captura de tela de um perfil no modo desktop](https://github.com/thargonion/Cuscuz.in-UI-Mastodon/blob/main/screenshots/global_light-desktop.png)
-<img src="https://github.com/thargonion/Cuscuz.in-UI-Mastodon/blob/main/screenshots/global_light-mobile.png" width=40%>
+<img src="https://github.com/thargonion/Cuscuz.in-UI-Mastodon/blob/main/screenshots/global_light-mobile.png">
 ## Capturas de telas - Dark Mode
 ![Captura de tela de um perfil no modo desktop](https://github.com/thargonion/Cuscuz.in-UI-Mastodon/blob/main/screenshots/global_dark-desktop.png)
-<img src="https://github.com/thargonion/Cuscuz.in-UI-Mastodon/blob/main/screenshots/global_dark-mobile.png" width=40%>
+<img src="https://github.com/thargonion/Cuscuz.in-UI-Mastodon/blob/main/screenshots/global_dark-mobile.png">
