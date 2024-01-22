@@ -1,4 +1,4 @@
-/*  CuscuzinUI - Dark for Mastodon   
+﻿/*  CuscuzinUI - Dark for Mastodon versão 1.1   
     Last Mastodon compatibility check: v4.1.4 stable ✅
     Baseado na versão 1.7.5 do TangerineUI
 */
@@ -170,12 +170,10 @@ body.layout-single-column {
     background: transparent;
 }
 
-/* Round avatars */
-.layout-single-column .account__avatar img {
-    border-radius: 50%;
-}
+
 
 /* Rordered layout */
+@media screen and (max-width:1080px) /* comente o media se quiser inverter a posição da barra de navegação e composição de toot*/{
 .layout-single-column .columns-area__panels__pane--navigational {
     order: 1;
 }
@@ -189,13 +187,13 @@ body.layout-single-column {
     flex: unset;
     height: auto;
 }
+
 .layout-single-column .scrollable,
 .layout-single-column .column > .scrollable {
     border-radius: 7px !important;
     max-height: max-content;
 }
-
-
+}
 /* *️⃣ Icons
    -------- */
 .layout-single-column i.fa-bookmark:before,
@@ -2624,4 +2622,15 @@ span.status__visibility-icon i.fa-lock, div.detailed-status__meta i.fa-lock { co
 }
 .status-direct.muted .status__content {
     background: rgba(155, 174, 200, 0.1);
+}
+
+/* Zoom on emojis on hover (in post content only */ 
+.app-body .status__content:not(.status__content--collapsed) { /* So the emoji doesn't clip out when zoomed on. */
+    overflow: visible;
+}
+.app-body .status__content .emojione {
+    transition: transform .8s .8s;
+}
+.app-body .status__content .emojione:hover {
+    transform: scale(3);
 }
